@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+  </head>
+
+  <body class="text-center">
+
+   
+<%= form_for :session, url: '/user/create/', :method => post, :remote => true, :authenticity_token => true, :html => { :class => 'validate', :id => 'form_user' } do |s|%>
+   
+      
+      <h1 class="h3 mb-3 font-weight-normal"> Inscris-toi !</h1>
+
+      <div class="container">
+      <label for="user/create/:name" class="sr-only">Name</label>
+      <input type="Name" id="['name']" class="form-control" placeholder="Name" required>
+      </div>
+
+      <div class="container">
+      <label for="user/create/:email" class="sr-only">Email address</label>
+      <input type="email" id="['email']" class="form-control" placeholder="Email address" required autofocus>
+      </div>
+
+      <div class="container">
+      <label for="user/create/:password" class="sr-only">Password</label>
+      <input type="password" id= "['password']" class="form-control" placeholder="Password" required>
+      </div>
+     
+
+       <div class="container">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </div>
+    </form>
+    <% end %>
+  </body>
+</html>
